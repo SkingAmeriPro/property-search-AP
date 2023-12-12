@@ -92,6 +92,7 @@ class Prediction {
       data['terms'] = this.terms!.map((v) => v.toJson()).toList();
     }
     data['types'] = this.types;
+    data['zip'] = this.zip;
     data['lat'] = this.lat;
     data['lng'] = this.lng;
 
