@@ -33,6 +33,7 @@ class Prediction {
   StructuredFormatting? structuredFormatting;
   List<Terms>? terms;
   List<String>? types;
+  String? zip;
   String? lat;
   String? lng;
 
@@ -46,6 +47,7 @@ class Prediction {
       this.terms,
       this.types,
       this.lat,
+      this.zip,
       this.lng});
 
   Prediction.fromJson(Map<String, dynamic> json) {
@@ -63,7 +65,7 @@ class Prediction {
         ? new StructuredFormatting.fromJson(json['structured_formatting'])
         : null;
     if (json['terms'] != null) {
-      terms =[];
+      terms = [];
       json['terms'].forEach((v) {
         terms!.add(new Terms.fromJson(v));
       });
