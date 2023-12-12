@@ -46,8 +46,8 @@ class Prediction {
       this.structuredFormatting,
       this.terms,
       this.types,
-      this.lat,
       this.zip,
+      this.lat,
       this.lng});
 
   Prediction.fromJson(Map<String, dynamic> json) {
