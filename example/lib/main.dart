@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_places_flutter/google_places_flutter.dart';
-import 'package:google_places_flutter/model/prediction.dart';
+import 'package:google_places_autocomplete_text_field/google_places_flutter.dart';
+import 'package:google_places_autocomplete_text_field/model/prediction.dart';
 
 void main() => runApp(MyApp());
 
