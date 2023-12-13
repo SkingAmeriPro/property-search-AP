@@ -187,6 +187,9 @@ class _GooglePlaceAutoCompleteTextFieldState
         .firstWhere(
             (entry) => entry.types!.contains('administrative_area_level_1'))
         .shortName;
+    prediction.city = placeDetails.result!.addressComponents!
+        .firstWhere((entry) => entry.types!.contains('locality'))
+        .shortName;
 
     widget.getPlaceDetailWithLatLng!(prediction);
 
