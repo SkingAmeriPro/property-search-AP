@@ -36,7 +36,7 @@ class Prediction {
   List<Terms>? terms;
   List<String>? types;
   String? zip;
-  List<AddressComponents>? addressParts;
+  List? addressParts;
   String? lat;
   String? lng;
 
