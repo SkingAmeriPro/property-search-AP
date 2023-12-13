@@ -1,3 +1,5 @@
+import 'package:google_places_autocomplete_text_field/model/place_details.dart';
+
 class PlacesAutocompleteResponse {
   List<Prediction>? predictions;
   String? status;
@@ -33,7 +35,7 @@ class Prediction {
   StructuredFormatting? structuredFormatting;
   List<Terms>? terms;
   List<String>? types;
-  String? zip;
+  List<AddressComponents>? zip;
   String? lat;
   String? lng;
 
