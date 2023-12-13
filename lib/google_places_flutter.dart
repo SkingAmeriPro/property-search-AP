@@ -180,7 +180,7 @@ class _GooglePlaceAutoCompleteTextFieldState
 
     prediction.lat = placeDetails.result!.geometry!.location!.lat.toString();
     prediction.lng = placeDetails.result!.geometry!.location!.lng.toString();
-    prediction.zip = placeDetails.result!.addressComponents![7].shortName;
+    prediction.zip = placeDetails.result!.addressComponents;
 
     widget.getPlaceDetailWithLatLng!(prediction);
 

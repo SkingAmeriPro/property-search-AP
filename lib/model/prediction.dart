@@ -35,7 +35,7 @@ class Prediction {
   StructuredFormatting? structuredFormatting;
   List<Terms>? terms;
   List<String>? types;
-  String? zip;
+  List<AddressComponents>? zip;
   String? lat;
   String? lng;
 
