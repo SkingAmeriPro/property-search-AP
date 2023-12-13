@@ -36,7 +36,7 @@ class Prediction {
   List<Terms>? terms;
   List<String>? types;
   String? zip;
-  List<AddressComponents>? addressParts;
+  String? state;
   String? lat;
   String? lng;
 
@@ -50,7 +50,7 @@ class Prediction {
       this.terms,
       this.types,
       this.zip,
-      this.addressParts,
+      this.state,
       this.lat,
       this.lng});
 
@@ -97,7 +97,7 @@ class Prediction {
     }
     data['types'] = this.types;
     data['zip'] = this.zip;
-    data['address_parts'] = this.addressParts;
+    data['state'] = this.state;
     data['lat'] = this.lat;
     data['lng'] = this.lng;
 

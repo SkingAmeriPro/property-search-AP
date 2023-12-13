@@ -180,8 +180,13 @@ class _GooglePlaceAutoCompleteTextFieldState
 
     prediction.lat = placeDetails.result!.geometry!.location!.lat.toString();
     prediction.lng = placeDetails.result!.geometry!.location!.lng.toString();
-    prediction.zip = placeDetails.result!.addressComponents!.last.shortName;
-    prediction.addressParts = placeDetails.result!.addressComponents;
+    prediction.zip = placeDetails.result!.addressComponents!
+        .firstWhere((entry) => entry.types!.contains('postal_code'))
+        .shortName;
+    prediction.state = placeDetails.result!.addressComponents!
+        .firstWhere(
+            (entry) => entry.types!.contains('administrative_area_level_1'))
+        .shortName;
 
     widget.getPlaceDetailWithLatLng!(prediction);
 
