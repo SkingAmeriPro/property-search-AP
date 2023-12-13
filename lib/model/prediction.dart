@@ -37,6 +37,7 @@ class Prediction {
   List<String>? types;
   String? zip;
   String? state;
+  String? city;
   String? lat;
   String? lng;
 
@@ -51,6 +52,7 @@ class Prediction {
       this.types,
       this.zip,
       this.state,
+      this.city,
       this.lat,
       this.lng});
 
@@ -98,6 +100,7 @@ class Prediction {
     data['types'] = this.types;
     data['zip'] = this.zip;
     data['state'] = this.state;
+    data['city'] = this.city;
     data['lat'] = this.lat;
     data['lng'] = this.lng;
 
